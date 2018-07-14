@@ -1,6 +1,21 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 
-// create a class that will be a custom widget
-// this class must extend the stateless widget based class
-
-// must define a build method that returns the widget's that *this* widget will show
+// class App defines a new class called App that takes the functionality inside of the StatelessWidget class
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Lets see some images!'),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print('Button pressed!');
+          },
+          child: Icon(Icons.add),
+        ),
+      ), // placing trailing commas makes certain the code does not collaps in VS Code
+    );
+  }
+}
